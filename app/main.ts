@@ -5,8 +5,8 @@ import { STATUS_CODE } from "jsr:@std/http/status"
 
 
 // Open a database
-// const db = new DB('./db/test.db');
-const db = new DB()
+const db = new DB('db/test.db');
+// const db = new DB()
 
 // db.execute(`
 //     CREATE TABLE IF NOT EXISTS people (

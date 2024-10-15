@@ -5,24 +5,16 @@ import { STATUS_CODE } from "jsr:@std/http/status"
 
 
 // Open a database
-const db = new DB('./db/test.db');
+// const db = new DB('./db/test.db');
+const db = new DB()
 
-db.execute(`
-    CREATE TABLE IF NOT EXISTS people (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        name TEXT
-    )
-`);
+// db.execute(`
+//     CREATE TABLE IF NOT EXISTS people (
+//         id INTEGER PRIMARY KEY AUTOINCREMENT,
+//         name TEXT
+//     )
+// `)
 
-// Run a simple query
-// for (const name of ['Peter Parker', 'Clark Kent', 'Bruce Wayne']) {
-//   db.query('INSERT INTO people (name) VALUES (?)', [name]);
-// }
-
-
-
-// Close connection
-// db.close();
 
 const notFound = () => new Response(
     'Not Found',

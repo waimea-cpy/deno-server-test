@@ -27,8 +27,14 @@ const home: Route = {
 }
 
 const about: Route = {
-    pattern: new URLPattern({ pathname: '/about' }),
-    handler: () => new Response('About page')
+    pattern: new URLPattern({ pathname: '/hello' }),
+    handler: () => new Response(
+        `
+            <h1>Hello, Deno!</h1>
+            <img src="/static/dino.png">
+        `,
+        { headers: { "content-type": "text/html" } }
+    )
 }
 
 const all: Route = {
